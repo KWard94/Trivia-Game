@@ -1,0 +1,17 @@
+body {
+    color:orangered;
+    text-align: center;
+}
+
+.game-window {
+    background-color: grey;
+    height: 800px; 
+    width: 700px;
+}
+
+.question-box {
+     height: 300px; 
+     width: 400px; 
+     background-color: paleturquoise;
+     position: absolute;
+}
