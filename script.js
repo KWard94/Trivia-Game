@@ -10,6 +10,11 @@ function test() {
 }
 
 let aButton = document.querySelector("#answer-A")
+let bButton = document.querySelector("#answer-B")
+let cButton = document.querySelector("#answer-C")
+let dButton = document.querySelector("#answer-D")
 
-// aButton.addEventListener("click", alert("button works!"))
 aButton.addEventListener("click", test);
+bButton.addEventListener("click", test);
+cButton.addEventListener("click", test);
+dButton.addEventListener("click", test);
