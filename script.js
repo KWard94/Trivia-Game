@@ -5,7 +5,7 @@
 
 //Later, I will have the buttons fill with the answers as variables
 function test() {
-    console.log("I work!!!")
+    alert("Congratulations, you clicked a button!")
 }
 
 let aButton = document.querySelector("#answer-A")
@@ -19,4 +19,7 @@ cButton.addEventListener("click", test);
 dButton.addEventListener("click", test);
 
 let questionText = document.querySelector(".question-text")
-questionText.innerHTML = "Test1";
+questionText.innerHTML = "This will be a question, populated by a variable";
+
+let nextButton = document.querySelector("#next-button")
+nextButton.addEventListener("click", test)

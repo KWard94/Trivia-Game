@@ -3,7 +3,7 @@ body {
   background-color: lightgray;
 }
 
-.answer-button {
+.button {
   background-color: palevioletred;
   border-radius: 25%;
   position: flex;
@@ -11,6 +11,7 @@ body {
   justify-content: bottom;
   padding: 2%;
   margin: 4%;
+  /* need to figure out how to center buttons properly */
 }
 .game-window {
   background-color: grey;
@@ -19,12 +20,6 @@ body {
   position:fixed;
 }
 
-.buttons {
-    position: flex;
-    align-items: center;
-    justify-content: center;
-    /* need to figure out how to move buttons to bottom */
-}
 .question-box {
   height: 50%;
   width: 50%;
@@ -36,4 +31,8 @@ body {
 
 .question-text {
     font-size: 300%;
+}
+
+#next-button {
+    background-color: lightgreen;
 }
