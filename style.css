@@ -1,5 +1,6 @@
 body {
   text-align: center;
+  background-color: lightgray;
 }
 
 .answer-button {
@@ -13,19 +14,24 @@ body {
 }
 .game-window {
   background-color: grey;
-  height: 800px;
-  width: 700px;
-  z-index: -1;
+  height: 90%;
+  width: 100%;
+  position:fixed;
 }
 
 .buttons {
-    z-index: 1;
+    position: flex;
+    align-items: center;
+    justify-content: center;
+    /* need to figure out how to move buttons to bottom */
 }
 .question-box {
-  height: 300px;
-  width: 400px;
+  height: 50%;
+  width: 50%;
   background-color: paleturquoise;
-  position: flex;
+  position: fixed;
+  top: 25%;
+  left: 25%;
 }
 
 .question-text {
