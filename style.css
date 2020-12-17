@@ -1,17 +1,26 @@
 body {
-    color:orangered;
-    text-align: center;
+  color: orangered;
+  text-align: center;
 }
 
+.answer-button {
+  background-color: palevioletred;
+  border-radius: 25%;
+  position: flex;
+  align-items: center;
+  justify-content: bottom;
+  padding: 2%;
+  margin: 4%;
+}
 .game-window {
-    background-color: grey;
-    height: 800px; 
-    width: 700px;
+  background-color: grey;
+  height: 800px;
+  width: 700px;
 }
 
 .question-box {
-     height: 300px; 
-     width: 400px; 
-     background-color: paleturquoise;
-     position: absolute;
+  height: 300px;
+  width: 400px;
+  background-color: paleturquoise;
+  position: flex;
 }
