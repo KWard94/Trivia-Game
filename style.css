@@ -1,5 +1,4 @@
 body {
-  color: orangered;
   text-align: center;
 }
 
@@ -16,11 +15,19 @@ body {
   background-color: grey;
   height: 800px;
   width: 700px;
+  z-index: -1;
 }
 
+.buttons {
+    z-index: 1;
+}
 .question-box {
   height: 300px;
   width: 400px;
   background-color: paleturquoise;
   position: flex;
+}
+
+.question-text {
+    font-size: 300%;
 }

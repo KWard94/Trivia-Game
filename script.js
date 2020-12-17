@@ -5,7 +5,6 @@
 
 //Later, I will have the buttons fill with the answers as variables
 function test() {
-    event.preventDefault()
     console.log("I work!!!")
 }
 
@@ -18,3 +17,6 @@ aButton.addEventListener("click", test);
 bButton.addEventListener("click", test);
 cButton.addEventListener("click", test);
 dButton.addEventListener("click", test);
+
+let questionText = document.querySelector(".question-text")
+questionText.innerHTML = "Test1";
