@@ -1,10 +1,15 @@
 body {
   text-align: center;
-  background-color: lightgray;
+  background-color: #00171f;
+}
+
+h1 {
+    color:#ffffff;
+    font-size: 350%;
 }
 
 .button {
-  background-color: palevioletred;
+  background-color: #00a8e8;
   border-radius: 25%;
   position: flex;
   align-items: center;
@@ -14,7 +19,7 @@ body {
   /* need to figure out how to center buttons properly */
 }
 .game-window {
-  background-color: grey;
+  background-color: #007ea7;
   height: 90%;
   width: 100%;
   position:fixed;
@@ -23,7 +28,7 @@ body {
 .question-box {
   height: 50%;
   width: 50%;
-  background-color: paleturquoise;
+  background-color: #003459;
   position: fixed;
   top: 25%;
   left: 25%;
@@ -31,8 +36,9 @@ body {
 
 .question-text {
     font-size: 300%;
+    color: #ffffff;
 }
 
 #next-button {
-    background-color: lightgreen;
+    background-color: rgb(207, 136, 4);
 }
