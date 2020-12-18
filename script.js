@@ -40,8 +40,7 @@ let questionArray = [
         answerB: "20 km/hr", 
         answerC: "Is it an African or European swallow?",
         answerD: "25 km/hr",       
-    }
-    
+    }   
 ]
 questionText.innerHTML = questionArray[0].question;
 

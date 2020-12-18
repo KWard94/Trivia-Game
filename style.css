@@ -9,18 +9,28 @@ h1 {
     font-family: 'Bungee Outline', cursive;
 }
 
+.answer-buttons {
+    display: grid;
+    grid-template-columns: 400px 400px;
+    grid-template-rows: auto auto;
+    display: flex;
+    flex:auto;
+    justify-content: center;
+    align-items: center;
+}
 
 .button {
   background-color: #00a8e8;
   color:white;
   font-family: 'Open Sans', sans-serif;
-  font-size: 200%;
+  font-size: 100%;
   border-radius: 25%;
-  position: flex;
-  align-items: center;
-  justify-content: bottom;
   padding: 2%;
   margin: 4%;
+  max-width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   /* need to figure out how to center buttons properly */
 }
 .game-window {
@@ -28,28 +38,36 @@ h1 {
   height: 90%;
   width: 100%;
   position:fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #scoreboard {
-    color:  rgb(207, 136, 4);
+    color: red;
+    height: 100px;
+    width: 100px;
+    background-color: lightgrey;
+    display: flex;
+    align-items: center;
+    float: right;
+    border-radius: 5%;
 }
 
 .question-box {
-  height: 50%;
-  width: 50%;
+  height: 75%;
+  width: 80%;
   background-color: #003459;
-  position: fixed;
-  top: 40%;
-  left: 25%;
 }
 
 .question-text {
     font-size: 250%;
     color: #ffffff;
     font-family: 'Open Sans', sans-serif;
-
+    
 }
 
 #next-button {
     background-color: rgb(207, 136, 4);
+    font-size: 150%;
 }

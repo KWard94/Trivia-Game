@@ -21,6 +21,7 @@ Stretch Goals for this game:
 3:This game will play a sound on each correct or incorrect answer
 4:This game will display a "congratulations" modal upon completion of the game
 5:the answers can be shuffled also, so the game has better replayability
+6: have the game be dynamic and adaptable to smaller screens
 
 
 Notes on my challenges:
