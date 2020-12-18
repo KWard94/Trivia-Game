@@ -23,7 +23,7 @@ Stretch Goals for this game:
 
 
 Notes on my challenges:
-1:
+1:Struggle to move buttons to their places
 
 
 

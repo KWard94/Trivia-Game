@@ -6,10 +6,14 @@ body {
 h1 {
     color:#ffffff;
     font-size: 350%;
+    font-family: 'Bungee Outline', cursive;
 }
 
 .button {
   background-color: #00a8e8;
+  color:white;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 200%;
   border-radius: 25%;
   position: flex;
   align-items: center;
@@ -30,13 +34,15 @@ h1 {
   width: 50%;
   background-color: #003459;
   position: fixed;
-  top: 25%;
+  top: 40%;
   left: 25%;
 }
 
 .question-text {
-    font-size: 300%;
+    font-size: 250%;
     color: #ffffff;
+    font-family: 'Open Sans', sans-serif;
+
 }
 
 #next-button {
