@@ -20,10 +20,12 @@ Stretch Goals for this game:
 2:This game will have a pool of questions to pull from so the game will be slightly different each time
 3:This game will play a sound on each correct or incorrect answer
 4:This game will display a "congratulations" modal upon completion of the game
+5:the answers can be shuffled also, so the game has better replayability
 
 
 Notes on my challenges:
 1:Struggle to move buttons to their places
+2: populating the answers into a button via innerHTML
 
 
 

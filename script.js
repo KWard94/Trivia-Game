@@ -4,6 +4,13 @@
 // I will create all four buttons and listen for click events
 
 //Later, I will have the buttons fill with the answers as variables
+
+//^^DONE^^
+
+//I need to populate answers onto the buttons for a,b,c,d
+//I need to build out my array with more questions
+//i need to test the next question button so that it cycles through questions
+// 
 function test() {
     alert("Congratulations, you clicked a button!")
 }
@@ -18,16 +25,27 @@ bButton.addEventListener("click", test);
 cButton.addEventListener("click", test);
 dButton.addEventListener("click", test);
 
+let scoreBoard = document.querySelector("#scoreboard")
+scoreBoard.innerHTML = `Your score is: `
+
 let questionText = document.querySelector(".question-text")
 
 let nextButton = document.querySelector("#next-button")
 nextButton.addEventListener("click", test)
 
-let questionOptions = [
+let questionArray = [
     {
-        question: "What is the airspeed velocity of an unladen swallow?"        
+        question: "What is the airspeed velocity of an unladen swallow?",
+        answerA: "15km/hr",
+        answerB: "20 km/hr", 
+        answerC: "Is it an African or European swallow?",
+        answerD: "25 km/hr",       
     }
     
 ]
-questionText.innerHTML = questionOptions[0].question;
-console.log(questionOptions[0].question)
+questionText.innerHTML = questionArray[0].question;
+
+aButton.value = questionArray[0].answerA
+bButton.value = questionArray[0].answerB
+cButton.value = questionArray[0].answerC
+dButton.value = questionArray[0].answerD

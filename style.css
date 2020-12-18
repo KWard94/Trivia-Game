@@ -9,6 +9,7 @@ h1 {
     font-family: 'Bungee Outline', cursive;
 }
 
+
 .button {
   background-color: #00a8e8;
   color:white;
@@ -27,6 +28,10 @@ h1 {
   height: 90%;
   width: 100%;
   position:fixed;
+}
+
+#scoreboard {
+    color:  rgb(207, 136, 4);
 }
 
 .question-box {
