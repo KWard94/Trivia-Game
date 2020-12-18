@@ -19,7 +19,15 @@ cButton.addEventListener("click", test);
 dButton.addEventListener("click", test);
 
 let questionText = document.querySelector(".question-text")
-questionText.innerHTML = "This will be a question, populated by a variable";
 
 let nextButton = document.querySelector("#next-button")
 nextButton.addEventListener("click", test)
+
+let questionOptions = [
+    {
+        question: "What is the airspeed velocity of an unladen swallow?"        
+    }
+    
+]
+questionText.innerHTML = questionOptions[0].question;
+console.log(questionOptions[0].question)
