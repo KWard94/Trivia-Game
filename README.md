@@ -26,7 +26,7 @@ Stretch Goals for this game:
 
 Notes on my challenges:
 1:Struggle to move buttons to their places
-2: populating the answers into a button via innerHTML
+2: populating the answers into a button via innerHTML(had to use value, not inner html)
 
 
 
