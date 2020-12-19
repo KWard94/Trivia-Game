@@ -15,12 +15,13 @@ function test() {
     alert("Congratulations, you clicked a button!")
 }
 
+var score = 0
+
 let aButton = document.getElementById("answer-A")
 let bButton = document.querySelector("#answer-B")
 let cButton = document.querySelector("#answer-C")
 let dButton = document.querySelector("#answer-D")
 
-let score = 0
 
 aButton.addEventListener("click", testClick);
 bButton.addEventListener("click", test);
@@ -51,10 +52,22 @@ dButton.value = questionArray[0].answers[3]
 
 //NEED HELP TO WRITE FUNCTION FOR USER INPUT/CLICK ON CORRECT ANSWER
 
-function testClick() {
-    console.log("PLEASE FOR THE LOVE OF GOD")
-    score ++
-}
-
 let scoreBoard = document.querySelector("#scoreboard")
 scoreBoard.innerHTML = `Your score is: ${score}`
+
+function incrementScore () {
+    score = score+10;
+    console.log("score change")
+}
+incrementScore();
+
+function testClick() {
+    console.log("pretty sure working");
+    incrementScore();
+}
+
+//score increment function seems to work, but does not change score variable
+
+// aButton.onclick = function () {
+    //     console.log("A button clicked, did it really work???")
+    // }
