@@ -15,7 +15,6 @@ function test() {
     alert("Congratulations, you clicked a button!")
 }
 
-var score = 0
 
 let aButton = document.getElementById("answer-A")
 let bButton = document.querySelector("#answer-B")
@@ -23,10 +22,10 @@ let cButton = document.querySelector("#answer-C")
 let dButton = document.querySelector("#answer-D")
 
 
-aButton.addEventListener("click", testClick);
-bButton.addEventListener("click", test);
-cButton.addEventListener("click", test);
-dButton.addEventListener("click", test);
+aButton.addEventListener("click", isCorrect);
+bButton.addEventListener("click", isCorrect);
+cButton.addEventListener("click", isCorrect);
+dButton.addEventListener("click", isCorrect);
 
 
 let questionText = document.querySelector(".question-text")
@@ -38,7 +37,7 @@ let questionArray = [
     {
         question: "What is the airspeed velocity of an unladen swallow?",
         answers: ["15km/hr", "20 km/hr", "African or European Swallow?", "25 km/hr"],
-        correctAnsw: 2,
+        correctAnsw: "African or European Swallow?",
     }   
 ]
 
@@ -52,14 +51,30 @@ dButton.value = questionArray[0].answers[3]
 
 //NEED HELP TO WRITE FUNCTION FOR USER INPUT/CLICK ON CORRECT ANSWER
 
+// let userGuess = /*something*/
+// console.log(userGuess)
+
+function isCorrect(event) {
+        console.log(event.target.value)
+        if (event.target.value == questionArray[0].correctAnsw) {
+            console.log("Is correct")
+            incrementScore();
+        }
+    // if (questionArray[0].answers[userGuess] == questionArray[0].correctAnsw) {
+    //     console.log("Correct Answer!!!")
+    // }
+}
+
+var score = 0
 let scoreBoard = document.querySelector("#scoreboard")
 scoreBoard.innerHTML = `Your score is: ${score}`
 
+
 function incrementScore () {
     score = score+10;
+    scoreBoard.innerHTML = `Your score is: ${score}`
     console.log("score change")
 }
-incrementScore();
 
 function testClick() {
     console.log("pretty sure working");
