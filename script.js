@@ -25,14 +25,29 @@ let nextButton = document.querySelector("#next-button")
 
 let questionArray = [
     {
-        question: "What is the airspeed velocity of an unladen swallow?",
-        answers: ["15km/hr", "20 km/hr", "African or European Swallow?", "25 km/hr"],
-        correctAnsw: "African or European Swallow?",
+        question: "How many ghosts show up in A Christmas Carol?",
+        answers: ["One", "Two", "Three", "Four"],
+        correctAnsw: "Four",
     },
     {
-        question: "test question 2",
-        answers: ["incorrect ans", "correct ans", "also incorrect", "third incorrect"],
-        correctAnsw: "correct ans",
+        question: "Which Hollywood actor played six different roles in The Polar Express?",
+        answers: ["Tom Hanks", "Peter Scolari", "Leslie Zemeckis", "Tim Allen"],
+        correctAnsw: "Tom Hanks",
+    },
+    {
+        question: "How many sizes does the Grinch's heart grow once he gets feelings?",
+        answers: ["Two Sizes", "Three Sizes", "Four Sizes", "Five Sizes"],
+        correctAnsw: "Three Sizes",
+    },
+    {
+        question: "What is the highest grossing Christmas movie of all time?",
+        answers: ["Home Alone", "Elf", "The Grinch", "The Santa Clause"],
+        correctAnsw: "The Grinch",
+    },
+    {
+        question: "What Christmas song has appeared in the most movies?",
+        answers: ["Jingle Bells", "Santa Baby", "Silver Bells", "O Holy Night"],
+        correctAnsw: "Jingle Bells",
     },
 ]
 var qNum = 0
@@ -40,11 +55,15 @@ var qNum = 0
 console.log(qNum)
 
 function nextQ() {
-    console.log("next button works")
-    qNum++
-    console.log(qNum)
-    return qNum
+    console.log("next button works");
+    qNum+=1;
+    console.log(qNum);
+    return qNum;
 }
+
+//when I call the nextQ function the question changes, but the qNum variable does not change
+// nextQ()
+
 questionText.innerHTML = questionArray[qNum].question;
 
 aButton.value = questionArray[qNum].answers[0]
@@ -59,9 +78,9 @@ nextButton.addEventListener("click", nextQ)
 //will have to change the questionArray index to a variable if I get the nextQ function working
 function isCorrect(event) {
         if (event.target.value == questionArray[0].correctAnsw) {
-            console.log("Correct Answer Selected!")
+            console.log("Correct Answer Selected!");
             incrementScore();
-            return true
+            return true;
         } else {
             console.log("incorrect!")
             return false
@@ -80,12 +99,12 @@ function incrementScore () {
 
 
 //would hopefully change the button color in correct answer
-function colorButtons () {
-if (isCorrect()) {
-    console.log("turn green")
-    document.getElementsByClassName("button").style.backgroundColor = "green"
-} else {
-    console.log("turn red")
-    document.getElementsByClassName("button").style.backgroundColor= "red";
-}
-}
+// function colorButtons () {
+// if (isCorrect()) {
+//     console.log("turn green")
+//     document.getElementsByClassName("button").style.backgroundColor = "green"
+// } else {
+//     console.log("turn red")
+//     document.getElementsByClassName("button").style.backgroundColor= "red";
+// }
+// }
