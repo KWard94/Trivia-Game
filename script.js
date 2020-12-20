@@ -22,7 +22,6 @@ dButton.addEventListener("click", isCorrect);
 let questionText = document.querySelector(".question-text")
 
 let nextButton = document.querySelector("#next-button")
-nextButton.addEventListener("click", test)
 
 let questionArray = [
     {
@@ -36,25 +35,27 @@ let questionArray = [
         correctAnsw: "correct ans",
     },
 ]
+var qNum = 0
 
-// for (i = 0; i <= questionArray.length; i++) {
-    //let i = variable?
-questionText.innerHTML = questionArray[0].question;
+questionText.innerHTML = questionArray[qNum].question;
 
-aButton.value = questionArray[0].answers[0]
-bButton.value = questionArray[0].answers[1]
-cButton.value = questionArray[0].answers[2]
-dButton.value = questionArray[0].answers[3]
-//insert varible into above? (questionArray[variable].answers.....)
-//variable++?
-// }
+aButton.value = questionArray[qNum].answers[0]
+bButton.value = questionArray[qNum].answers[1]
+cButton.value = questionArray[qNum].answers[2]
+dButton.value = questionArray[qNum].answers[3]
 
-//need to write next question button function, variable ++?
+nextButton.addEventListener("click", nextQ)
 //look up how to randomize entries in an array, could use to randomize answers
 
+console.log(qNum)
+function nextQ() {
+    console.log("next button works")
+    qNum++
+    console.log(qNum)
+    return qNum
+}
 
 function isCorrect(event) {
-        console.log(event.target.value)
         if (event.target.value == questionArray[0].correctAnsw) {
             console.log("Correct Answer Selected!")
             incrementScore();
@@ -72,4 +73,12 @@ function incrementScore () {
     console.log("score change")
 }
 
+//would hopefully change the button color in correct answer
 
+// function colorButtons () {
+// if (isCorrect == true) {
+//     document.getElementsByClassName("button").style.backgroundColor = "green";
+// } else {
+//     document.getElementsByClassName("button").style.backgroundColor= "red";
+// }
+// }
