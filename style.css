@@ -45,19 +45,23 @@ h1 {
 
 #scoreboard {
     color: red;
-    height: 100px;
-    width: 100px;
+    height: 17%;
+    width: 17%;
     background-color: lightgrey;
     display: flex;
     align-items: center;
-    float: right;
-    border-radius: 5%;
+    justify-content: center;
+    border-radius: 100%;
+    font-size: 200%;
+    margin: 20px;
+    padding:10px;
 }
 
 .question-box {
   height: 75%;
   width: 80%;
   background-color: #003459;
+  margin: 50px;
 }
 
 .question-text {
@@ -70,4 +74,6 @@ h1 {
 #next-button {
     background-color: rgb(207, 136, 4);
     font-size: 150%;
+    display: flex;
+    float: right;
 }
