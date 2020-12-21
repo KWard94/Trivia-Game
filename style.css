@@ -76,4 +76,12 @@ h1 {
     font-size: 150%;
     display: flex;
     float: right;
+    color:white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 100%;
+    border-radius: 25%;
+    padding: 2%;
+    margin: 4%;
+    max-width: 50%;
+  
 }
