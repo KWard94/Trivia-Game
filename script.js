@@ -18,8 +18,10 @@ let questionText = document.querySelector(".question-text");
 let nextButton = document.querySelector("#next-button");
 
 let questionArray = [
+    //the first question could be a start screen, need to change next button value to say start quiz, if score is 0 or if on first question. can use this method for a winner screen also.
+    //may need to remove this question and use a modal or entry window
 //   {
-//     question: "Sample Question?",
+//     question: "Welcome to Christmas Movie Trivia!",
 //     answers: ["incorrect", "incorrect", "Correct", "incorrect"],
 //     correctAnsw: "Correct",
 //   },
@@ -54,28 +56,23 @@ let questionArray = [
 
 var qNum = 0;
 
+
 function nextQ() {
     aButton.style.backgroundColor = "#007ea7";
     bButton.style.backgroundColor = "#007ea7";
     cButton.style.backgroundColor = "#007ea7";
     dButton.style.backgroundColor = "#007ea7";
-    console.log("next button works");
+    
     qNum += 1;
     console.log(`the variable qNum is ${qNum}`);
     questionText.innerHTML = questionArray[qNum].question;
-
+    
     aButton.value = questionArray[qNum].answers[0];
     bButton.value = questionArray[qNum].answers[1];
     cButton.value = questionArray[qNum].answers[2];
     dButton.value = questionArray[qNum].answers[3];
     return qNum;
 }
-
-// nextQ();
-console.log("the initial qNum variable is " + qNum);
-
-//when I call the nextQ function the question changes, but the qNum variable does not change
-// nextQ()
 
 questionText.innerHTML = questionArray[qNum].question;
 
@@ -96,15 +93,11 @@ scoreBoard.innerHTML = `Your score is: ${score}`;
 //maybe include a style change for correct/incorrect answers in this function?
 function isCorrect(event) {
   if (event.target.value == questionArray[qNum].correctAnsw) {
-    console.log("Correct Answer Selected!");
     incrementScore();
     event.target.style.backgroundColor = "green";
-    // return true;
   } else {
     event.target.style.backgroundColor = "red";
     decrementScore();
-    console.log("incorrect!");
-    // return false
   }
 }
 
@@ -120,14 +113,10 @@ function decrementScore() {
   score = score -= 5;
   scoreBoard.innerHTML = `Your score is: ${score}!`;
 }
+/******************* */
+function displayWindow() {
+    if(qNum === 0) {
+        buttonClass.value = "something";
 
-//would hopefully change the button color in correct answer
-// function colorButtons () {
-// if (isCorrect == true) {
-//     console.log("turn green")
-//     document.getElementsByClassName("button").style.backgroundColor = "green"
-// } else {
-//     console.log("turn red")
-//     document.getElementsByClassName("button").style.backgroundColor= "red";
-// }
-// }
+    }
+}

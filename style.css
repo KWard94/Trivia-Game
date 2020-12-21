@@ -5,14 +5,19 @@ body {
 
 h1 {
     color:#ffffff;
-    font-size: 350%;
+    font-size: 550%;
     font-family: 'Bungee Outline', cursive;
+}
+
+img {
+    width: 50%;
+    height: auto;
+    position: relative;
+    bottom: 400px;
 }
 
 .answer-buttons {
     display: grid;
-    grid-template-columns: 400px 400px;
-    grid-template-rows: auto auto;
     display: flex;
     flex:auto;
     justify-content: center;
@@ -23,7 +28,7 @@ h1 {
   background-color: #00a8e8;
   color:white;
   font-family: 'Open Sans', sans-serif;
-  font-size: 100%;
+  font-size: 125%;
   border-radius: 25%;
   padding: 2%;
   margin: 4%;
@@ -31,16 +36,19 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
+  border: solid;
   /* need to figure out how to center buttons properly */
 }
 .game-window {
   background-color: #007ea7;
   height: 90%;
   width: 100%;
-  position:fixed;
+  position: relative;
+  bottom: 700px;
   display: flex;
-  align-items: center;
   justify-content: center;
+  border:solid;
+  border-color: black;
 }
 
 #scoreboard {
@@ -54,14 +62,20 @@ h1 {
     border-radius: 100%;
     font-size: 200%;
     margin: 20px;
-    padding:15px;
+    padding:25px;
+    text-align: center;
+    border: solid;
+    border-color:black;
 }
 
 .question-box {
-  height: 75%;
+  height: 55%;
   width: 80%;
   background-color: #003459;
   margin: 50px;
+  margin-bottom: 150px;
+  border: solid;
+  border-color: white;
 }
 
 .question-text {
@@ -73,15 +87,16 @@ h1 {
 
 #next-button {
     background-color: rgb(207, 136, 4);
-    font-size: 150%;
     display: flex;
-    float: right;
+    justify-self: center;
+    align-self: center;
     color:white;
     font-family: 'Open Sans', sans-serif;
-    font-size: 100%;
+    font-size: 150%;
     border-radius: 25%;
     padding: 2%;
     margin: 4%;
     max-width: 50%;
-  
+    float: right;
+    border: solid;
 }
