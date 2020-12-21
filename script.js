@@ -1,16 +1,14 @@
 
 //I need to build out my array with more questions
 //i need to test the next question button so that it cycles through questions
-// 
-function test() {
-    alert("Congratulations, you clicked a button!")
-}
 
 
-let aButton = document.getElementById("answer-A")
+let aButton = document.querySelector("#answer-A")
 let bButton = document.querySelector("#answer-B")
 let cButton = document.querySelector("#answer-C")
 let dButton = document.querySelector("#answer-D")
+
+let buttonClass = document.querySelector(".button")
 
 
 aButton.addEventListener("click", isCorrect);
@@ -24,6 +22,11 @@ let questionText = document.querySelector(".question-text")
 let nextButton = document.querySelector("#next-button")
 
 let questionArray = [
+    {
+        question: "Sample Question?",
+        answers: ["incorrect", "incorrect", "Correct", "incorrect"],
+        correctAnsw: "Correct",
+    },
     {
         question: "How many ghosts show up in A Christmas Carol?",
         answers: ["One", "Two", "Three", "Four"],
@@ -50,9 +53,8 @@ let questionArray = [
         correctAnsw: "Jingle Bells",
     },
 ]
-var qNum = 0
 
-console.log(qNum)
+var qNum = 0
 
 function nextQ() {
     console.log("next button works");
@@ -60,6 +62,9 @@ function nextQ() {
     console.log(qNum);
     return qNum;
 }
+
+// nextQ();
+console.log(qNum);
 
 //when I call the nextQ function the question changes, but the qNum variable does not change
 // nextQ()
@@ -74,33 +79,52 @@ dButton.value = questionArray[qNum].answers[3]
 nextButton.addEventListener("click", nextQ)
 //look up how to randomize entries in an array, could use to randomize answers
 
-
-//will have to change the questionArray index to a variable if I get the nextQ function working
-function isCorrect(event) {
-        if (event.target.value == questionArray[0].correctAnsw) {
-            console.log("Correct Answer Selected!");
-            incrementScore();
-            return true;
-        } else {
-            console.log("incorrect!")
-            return false
-        }
-}
-
 var score = 0
 let scoreBoard = document.querySelector("#scoreboard")
 scoreBoard.innerHTML = `Your score is: ${score}`
 
 
+//will have to change the questionArray index to a variable if I get the nextQ function working
+
+//maybe include a style change for correct/incorrect answers in this function?
+function isCorrect(event) {
+        if (event.target.value == questionArray[qNum].correctAnsw) {
+            console.log("Correct Answer Selected!");
+            incrementScore();
+            console.log("turn green")
+            event.target.style.backgroundColor = "green"
+            return true;
+        } else {
+            event.target.style.backgroundColor = "red";
+            decrementScore()
+            console.log("incorrect!")
+            return false
+        }
+}
+
+
+
 function incrementScore () {
     score = score+10;
-    scoreBoard.innerHTML = `Your score is: ${score}`
+    scoreBoard.innerHTML = `Your score is: ${score}!`
 }
+
+function decrementScore () {
+    score = score-=5
+    scoreBoard.innerHTML = `Your score is: ${score}!`
+}
+
+function winGame() {
+    if (score === 100) {
+        console.log("You Win!!!")
+    }
+}
+winGame()
 
 
 //would hopefully change the button color in correct answer
 // function colorButtons () {
-// if (isCorrect()) {
+// if (isCorrect == true) {
 //     console.log("turn green")
 //     document.getElementsByClassName("button").style.backgroundColor = "green"
 // } else {
