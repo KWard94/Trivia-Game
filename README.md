@@ -53,6 +53,8 @@ View the deployed version here: https://kward94.github.io/Trivia-Game-JavaScript
 
 - One major issue I ran into was that I wanted to write more DRY code by using a for loop to populate my questions, but I was not able to get it working. Instead I chose to hard code some processes, in order to ensure proper functionality.
 
+- I had some difficulty with deploying my page, as the spacing and styling changed slightly from my live server. Initially my image also did not show up on the deployed game, but it did on the live server.
+
 
 
 ### What I learned:
