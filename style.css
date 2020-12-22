@@ -4,30 +4,30 @@ body {
 }
 
 h1 {
-    color:white;
-    font-size: 100px;
-    font-family: 'Bungee Outline', cursive;
+  color: white;
+  font-size: 100px;
+  font-family: "Bungee Outline", cursive;
 }
 
 img {
-    width: 50%;
-    height: auto;
-    position: relative;
-    bottom: 400px;
+  width: 50%;
+  height: auto;
+  position: relative;
+  bottom: 400px;
 }
 
 .answer-buttons {
-    display: grid;
-    display: flex;
-    flex:auto;
-    justify-content: center;
-    align-items: center;
+  display: grid;
+  display: flex;
+  flex: auto;
+  justify-content: center;
+  align-items: center;
 }
 
 .button {
   background-color: white;
-  color:#004b23;
-  font-family: 'Open Sans', sans-serif;
+  color: #004b23;
+  font-family: "Open Sans", sans-serif;
   font-size: 25px;
   border-radius: 25%;
   padding: 2%;
@@ -37,7 +37,6 @@ img {
   align-items: center;
   justify-content: center;
   border: solid;
-  /* need to figure out how to center buttons properly */
 }
 .game-window {
   background-color: #004b23;
@@ -47,25 +46,25 @@ img {
   bottom: 700px;
   display: flex;
   justify-content: center;
-  border:solid;
+  border: solid;
   border-color: red;
 }
 
 #scoreboard {
-    color: red;
-    height: 17%;
-    width: 17%;
-    background-color:#004b23;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 100%;
-    font-size: 50px;
-    margin: 20px;
-    padding:25px;
-    text-align: center;
-    border: solid;
-    border-color:red;
+  color: red;
+  height: 17%;
+  width: 17%;
+  background-color: #004b23;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  font-size: 50px;
+  margin: 20px;
+  padding: 25px;
+  text-align: center;
+  border: solid;
+  border-color: red;
 }
 
 .question-box {
@@ -80,21 +79,20 @@ img {
 }
 
 .question-text {
-    font-size: 75px;
-    color: #004b23;
-    font-family: 'Open Sans', sans-serif;
-    
+  font-size: 75px;
+  color: #004b23;
+  font-family: "Open Sans", sans-serif;
 }
 
 #next-button {
-    background-color:#004b23;
-    color:red;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 40px;
-    border-radius: 25%;
-    padding: 2%;
-    margin: 4%;
-    max-width: 50%;
-    float: right;
-    border: solid;
+  background-color: #004b23;
+  color: red;
+  font-family: "Open Sans", sans-serif;
+  font-size: 40px;
+  border-radius: 25%;
+  padding: 2%;
+  margin: 4%;
+  max-width: 50%;
+  float: right;
+  border: solid;
 }

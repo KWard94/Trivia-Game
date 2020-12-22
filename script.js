@@ -1,6 +1,3 @@
-//I need to build out my array with more questions
-//i need to test the next question button so that it cycles through questions
-
 let aButton = document.querySelector("#answer-A");
 let bButton = document.querySelector("#answer-B");
 let cButton = document.querySelector("#answer-C");
@@ -20,79 +17,73 @@ let nextButton = document.querySelector("#next-button");
 let qBox = document.querySelector(".question-box");
 
 let questionArray = [
-    // {
-    //     question: "Are You Ready for Some Questions?",
-    //     answers: ["Yes!", "No!",],
-    //     correctAnsw: "",
-    // },
-    {
-        question: "How many ghosts show up in A Christmas Carol?",
-        answers: ["One", "Two", "Three", "Four"],
-        correctAnsw: "Four",
-    },
-    {
-        question:
+  {
+    question: "How many ghosts show up in A Christmas Carol?",
+    answers: ["One", "Two", "Three", "Four"],
+    correctAnsw: "Four",
+  },
+  {
+    question:
       "Which Hollywood actor played six different roles in The Polar Express?",
     answers: ["Tom Hanks", "Peter Scolari", "Leslie Zemeckis", "Tim Allen"],
     correctAnsw: "Tom Hanks",
-},
-  {
-      question:
-      "How many sizes does the Grinch's heart grow once he gets feelings?",
-      answers: ["Two Sizes", "Three Sizes", "Four Sizes", "Five Sizes"],
-      correctAnsw: "Three Sizes",
   },
   {
-      question: "What is the highest grossing Christmas movie of all time?",
-      answers: ["Home Alone", "Elf", "The Grinch", "The Santa Clause"],
-      correctAnsw: "The Grinch",
-    },
-    {
-        question: "What Christmas song has appeared in the most movies?",
-        answers: ["Jingle Bells", "Santa Baby", "Silver Bells", "O Holy Night"],
-        correctAnsw: "Jingle Bells",
-    },
-    {
-      question: "Congratulations! You have completed Chirstmas Movie Trivia!",
-      answers: [],
-      correctAnsw: "",
-    },
-    {
-        question: "",
-        answers: [""],
-        correctAnsw: "",
-      },
+    question:
+      "How many sizes does the Grinch's heart grow once he gets feelings?",
+    answers: ["Two Sizes", "Three Sizes", "Four Sizes", "Five Sizes"],
+    correctAnsw: "Three Sizes",
+  },
+  {
+    question: "What is the highest grossing Christmas movie of all time?",
+    answers: ["Home Alone", "Elf", "The Grinch", "The Santa Clause"],
+    correctAnsw: "The Grinch",
+  },
+  {
+    question: "What Christmas song has appeared in the most movies?",
+    answers: ["Jingle Bells", "Santa Baby", "Silver Bells", "O Holy Night"],
+    correctAnsw: "Jingle Bells",
+  },
+  {
+    question: "Congratulations! You have completed Chirstmas Movie Trivia!",
+    answers: [],
+    correctAnsw: "",
+  },
+  {
+    question: "",
+    answers: [""],
+    correctAnsw: "",
+  },
 ];
 
 var qNum = 0;
 
-
 function nextQ() {
-    aButton.style.backgroundColor = "white";
-    bButton.style.backgroundColor = "white";
-    cButton.style.backgroundColor = "white";
-    dButton.style.backgroundColor = "white";
-    
-    qNum += 1;
-    questionText.innerHTML = questionArray[qNum].question;
-    
-    aButton.value = questionArray[qNum].answers[0];
-    bButton.value = questionArray[qNum].answers[1];
-    cButton.value = questionArray[qNum].answers[2];
-    dButton.value = questionArray[qNum].answers[3];
+  aButton.style.backgroundColor = "white";
+  bButton.style.backgroundColor = "white";
+  cButton.style.backgroundColor = "white";
+  dButton.style.backgroundColor = "white";
 
-    if (qNum == 5) {
-        aButton.style.display = "none";
-        bButton.style.display = "none";
-        cButton.style.display = "none";
-        dButton.style.display = "none";
-        scoreBoard.innerHTML = `Your final score is: ${score}!`;
-        nextButton.value = "Try Again!"
-    } else if (qNum == 6) {
-        nextButton.innerHTML = location.reload();
-        scoreBoard.style.display = "none";
-    } 
-    return qNum;
+  qNum += 1;
+  questionText.innerHTML = questionArray[qNum].question;
+
+  aButton.value = questionArray[qNum].answers[0];
+  bButton.value = questionArray[qNum].answers[1];
+  cButton.value = questionArray[qNum].answers[2];
+  dButton.value = questionArray[qNum].answers[3];
+
+  if (qNum == 5) {
+    aButton.style.display = "none";
+    bButton.style.display = "none";
+    cButton.style.display = "none";
+    dButton.style.display = "none";
+    scoreBoard.innerHTML = `Your final score is: ${score}!`;
+    nextButton.value = "Try Again!";
+  } else if (qNum == 6) {
+    nextButton.innerHTML = location.reload();
+    scoreBoard.style.display = "none";
+  }
+  return qNum;
 }
 
 questionText.innerHTML = questionArray[qNum].question;
@@ -103,15 +94,11 @@ cButton.value = questionArray[qNum].answers[2];
 dButton.value = questionArray[qNum].answers[3];
 
 nextButton.addEventListener("click", nextQ);
-//look up how to randomize entries in an array, could use to randomize answers
 
 var score = 0;
 let scoreBoard = document.querySelector("#scoreboard");
 scoreBoard.innerHTML = `Your score is: ${score}`;
 
-//will have to change the questionArray index to a variable if I get the nextQ function working
-
-//maybe include a style change for correct/incorrect answers in this function?
 function isCorrect(event) {
   if (event.target.value == questionArray[qNum].correctAnsw) {
     incrementScore();
@@ -123,7 +110,7 @@ function isCorrect(event) {
 }
 
 function displayWindow() {
-        qBox.display.style = "none";
+  qBox.display.style = "none";
 }
 
 function incrementScore() {
@@ -131,7 +118,6 @@ function incrementScore() {
   scoreBoard.innerHTML = `Your score is: ${score}!`;
   if (score >= 10) {
     console.log("Winner Winner Holiday Dinner!");
-    // displayWindow()
   }
 }
 
