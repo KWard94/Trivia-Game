@@ -1,17 +1,11 @@
 <!-- Need to finish: 
--fill out this readme
-
--adjust css to make slightly smaller
-
 -perhaps create a welcome window
-
--add hover elements or something to the buttons
 
 - make the website dynamic and adaptable to smaller screens -->
 
 # Christmas Movie Trivia Game!
 
-A game in HTML, CSS, and JavaScript
+A game in HTML, CSS, and JavaScript. This trivia game is based on Christmas Movie trivia questions found on the web.
 
 View the deployed version here: https://kward94.github.io/Trivia-Game-JavaScript-/
 
