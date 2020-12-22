@@ -115,13 +115,13 @@ input[type="button"].next-button:hover {
 
 #instructions-modal{
     width: 55%;
-    height: 60%;
+    height: 65%;
     font-size: 30px;
     background-color: #004b23;
     color:white;
     position: absolute;
     bottom:30px;
-    left: 300px;
+    left: 200px;
     z-index: 1;
     border: solid red;
     padding: 50px;
