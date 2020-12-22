@@ -1,8 +1,3 @@
-<!-- Need to finish: 
--perhaps create a welcome window
-
-- make the website dynamic and adaptable to smaller screens -->
-
 # Christmas Movie Trivia Game!
 
 A game in HTML, CSS, and JavaScript. This trivia game is based on Christmas Movie trivia questions found on the web.
@@ -12,6 +7,17 @@ View the deployed version here: https://kward94.github.io/Trivia-Game-JavaScript
 ## Wire Frame
 
 ![image](https://user-images.githubusercontent.com/75279409/102917852-289ff000-4443-11eb-9ebd-3e36221321cd.png)
+
+## Screenshots of Live App
+Instructions Modal
+![image](https://user-images.githubusercontent.com/75279409/102942397-75e78600-4472-11eb-82ee-4539e6ad9a87.png)
+
+Banner/Header
+![image](https://user-images.githubusercontent.com/75279409/102942327-4c2e5f00-4472-11eb-8f25-8cf404658ec7.png)
+
+Game Window
+![image](https://user-images.githubusercontent.com/75279409/102942256-14bfb280-4472-11eb-97c3-e54699533af7.png)
+
 
 ## User Stories
 
@@ -71,7 +77,4 @@ View the deployed version here: https://kward94.github.io/Trivia-Game-JavaScript
 
 ## Getting Started:
 
-Check it out! Fork, clone and run the application.
-
-
-<!-- ## Attribution: -->
+Check it out! Fork, clone, and run the application.
