@@ -121,7 +121,7 @@ input[type="button"].next-button:hover {
     color:white;
     position: absolute;
     bottom:25px;
-    left: 275px;
+    left: 300px;
     z-index: 1;
     border: solid red;
     padding: 50px;
