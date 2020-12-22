@@ -16,7 +16,7 @@ View the deployed version here: https://kward94.github.io/Trivia-Game-JavaScript
 
 ## User Stories
 
-MVP
+### MVP
 - This will be a trivia game with multiple questions and multiple choice answers.
 
 - This game will have buttons that are interactable and respond when clicked
