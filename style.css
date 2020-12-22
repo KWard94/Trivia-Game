@@ -7,7 +7,7 @@ h1 {
   color: white;
   font-size: 90px;
   font-family: "Bungee Outline", cursive;
-  text-shadow: 10px 10px 10px red;
+  text-shadow: 8px 8px 8px red;
 }
 
 img {
@@ -112,6 +112,45 @@ input[type="button"].next-button:hover {
     border: solid;
 }
 
+
+#instructions-modal{
+    width: 50%;
+    height: 60%;
+    font-size: 30px;
+    background-color: #004b23;
+    color:white;
+    position: absolute;
+    margin: 0 auto;
+    bottom:50px;
+    left: 500px;
+    z-index: 1;
+    border: solid red;
+    padding: 10px;
+    box-shadow: 0 0 0 5000px rgba(0, 0, 0, 0.7);
+    /* display: none; */
+}
+
+#close-modal {
+    font-size: 20px;
+    color:white;
+    background-color: green;
+    height: 50px;
+    width: 80px;
+    border-radius: 5px;
+    border: dotted red;
+}
+#close-modal:hover {
+    cursor: pointer;
+    color: red;
+}
+
+/* #modal-background {
+    background-color: darkgray;
+    opacity: .8;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+} */
 /* @media (max-width: 600px) {
     .h1 {
         color:red;

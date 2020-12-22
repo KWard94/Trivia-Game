@@ -93,6 +93,14 @@ bButton.value = questionArray[qNum].answers[1];
 cButton.value = questionArray[qNum].answers[2];
 dButton.value = questionArray[qNum].answers[3];
 
+let modal = document.querySelector("#instructions-modal")
+
+let closeModal = document.querySelector("#close-modal")
+
+closeModal.addEventListener("click", function() {
+    modal.style.display = "none";
+})
+
 nextButton.addEventListener("click", nextQ);
 
 var score = 0;
