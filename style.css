@@ -14,7 +14,7 @@ img {
   width: 50%;
   height: auto;
   position: relative;
-  bottom: 475px;
+  bottom: 400px;
 }
 
 
@@ -121,7 +121,7 @@ input[type="button"].next-button:hover {
     color:white;
     position: absolute;
     bottom:30px;
-    left: 375px;
+    left: 300px;
     z-index: 1;
     border: solid red;
     padding: 50px;
