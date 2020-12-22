@@ -17,60 +17,81 @@ let questionText = document.querySelector(".question-text");
 
 let nextButton = document.querySelector("#next-button");
 
+let qBox = document.querySelector(".question-box");
+
 let questionArray = [
-    //the first question could be a start screen, need to change next button value to say start quiz, if score is 0 or if on first question. can use this method for a winner screen also.
-    //may need to remove this question and use a modal or entry window
-//   {
-//     question: "Welcome to Christmas Movie Trivia!",
-//     answers: ["incorrect", "incorrect", "Correct", "incorrect"],
-//     correctAnsw: "Correct",
-//   },
-  {
-    question: "How many ghosts show up in A Christmas Carol?",
-    answers: ["One", "Two", "Three", "Four"],
-    correctAnsw: "Four",
-  },
-  {
-    question:
+    // {
+    //     question: "Are You Ready for Some Questions?",
+    //     answers: ["Yes!", "No!",],
+    //     correctAnsw: "",
+    // },
+    {
+        question: "How many ghosts show up in A Christmas Carol?",
+        answers: ["One", "Two", "Three", "Four"],
+        correctAnsw: "Four",
+    },
+    {
+        question:
       "Which Hollywood actor played six different roles in The Polar Express?",
     answers: ["Tom Hanks", "Peter Scolari", "Leslie Zemeckis", "Tim Allen"],
     correctAnsw: "Tom Hanks",
-  },
+},
   {
-    question:
+      question:
       "How many sizes does the Grinch's heart grow once he gets feelings?",
-    answers: ["Two Sizes", "Three Sizes", "Four Sizes", "Five Sizes"],
-    correctAnsw: "Three Sizes",
+      answers: ["Two Sizes", "Three Sizes", "Four Sizes", "Five Sizes"],
+      correctAnsw: "Three Sizes",
   },
   {
-    question: "What is the highest grossing Christmas movie of all time?",
-    answers: ["Home Alone", "Elf", "The Grinch", "The Santa Clause"],
-    correctAnsw: "The Grinch",
-  },
-  {
-    question: "What Christmas song has appeared in the most movies?",
-    answers: ["Jingle Bells", "Santa Baby", "Silver Bells", "O Holy Night"],
-    correctAnsw: "Jingle Bells",
-  },
+      question: "What is the highest grossing Christmas movie of all time?",
+      answers: ["Home Alone", "Elf", "The Grinch", "The Santa Clause"],
+      correctAnsw: "The Grinch",
+    },
+    {
+        question: "What Christmas song has appeared in the most movies?",
+        answers: ["Jingle Bells", "Santa Baby", "Silver Bells", "O Holy Night"],
+        correctAnsw: "Jingle Bells",
+    },
+    {
+      question: "Congratulations! You have completed Chirstmas Movie Trivia!",
+      answers: [],
+      correctAnsw: "",
+    },
+    {
+        question: "",
+        answers: [""],
+        correctAnsw: "",
+      },
 ];
 
 var qNum = 0;
 
 
 function nextQ() {
-    aButton.style.backgroundColor = "#007ea7";
-    bButton.style.backgroundColor = "#007ea7";
-    cButton.style.backgroundColor = "#007ea7";
-    dButton.style.backgroundColor = "#007ea7";
+    aButton.style.backgroundColor = "white";
+    bButton.style.backgroundColor = "white";
+    cButton.style.backgroundColor = "white";
+    dButton.style.backgroundColor = "white";
     
     qNum += 1;
-    console.log(`the variable qNum is ${qNum}`);
     questionText.innerHTML = questionArray[qNum].question;
     
     aButton.value = questionArray[qNum].answers[0];
     bButton.value = questionArray[qNum].answers[1];
     cButton.value = questionArray[qNum].answers[2];
     dButton.value = questionArray[qNum].answers[3];
+
+    if (qNum == 5) {
+        aButton.style.display = "none";
+        bButton.style.display = "none";
+        cButton.style.display = "none";
+        dButton.style.display = "none";
+        scoreBoard.innerHTML = `Your final score is: ${score}!`;
+        nextButton.value = "Try Again!"
+    } else if (qNum == 6) {
+        nextButton.innerHTML = location.reload();
+        scoreBoard.style.display = "none";
+    } 
     return qNum;
 }
 
@@ -94,29 +115,27 @@ scoreBoard.innerHTML = `Your score is: ${score}`;
 function isCorrect(event) {
   if (event.target.value == questionArray[qNum].correctAnsw) {
     incrementScore();
-    event.target.style.backgroundColor = "green";
+    event.target.style.backgroundColor = "#38b000";
   } else {
     event.target.style.backgroundColor = "red";
     decrementScore();
   }
 }
 
+function displayWindow() {
+        qBox.display.style = "none";
+}
+
 function incrementScore() {
   score = score + 10;
   scoreBoard.innerHTML = `Your score is: ${score}!`;
-  if (score >= 50) {
-    alert("Winner Winner Holiday Dinner!");
+  if (score >= 10) {
+    console.log("Winner Winner Holiday Dinner!");
+    // displayWindow()
   }
 }
 
 function decrementScore() {
   score = score -= 5;
   scoreBoard.innerHTML = `Your score is: ${score}!`;
-}
-/******************* */
-function displayWindow() {
-    if(qNum === 0) {
-        buttonClass.value = "something";
-
-    }
 }
