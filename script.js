@@ -1,3 +1,22 @@
+const api_url = 'https://opentdb.com/api.php?amount=25&category=14&difficulty=easy&type=multiple';
+
+let questions = [];
+
+
+fetch(api_url)
+.then (res => res.json())
+.then (data => {
+  console.log(data.results)
+  document.querySelector('#testData').innerHTML = `this is a test quesiton ${data.results[0].question}`
+}
+  )
+.catch (error => console.log(`Error: ${error}`));
+
+
+
+
+
+
 let aButton = document.querySelector("#answer-A");
 let bButton = document.querySelector("#answer-B");
 let cButton = document.querySelector("#answer-C");
@@ -15,6 +34,7 @@ let questionText = document.querySelector(".question-text");
 let nextButton = document.querySelector("#next-button");
 
 let qBox = document.querySelector(".question-box");
+
 
 let questionArray = [
   {
@@ -72,6 +92,8 @@ function nextQ() {
   cButton.value = questionArray[qNum].answers[2];
   dButton.value = questionArray[qNum].answers[3];
 
+
+  //This will need to change to a conditional statement regarding score instead of question number
   if (qNum == 5) {
     aButton.style.display = "none";
     bButton.style.display = "none";
@@ -99,6 +121,8 @@ let closeModal = document.querySelector("#close-modal")
 
 closeModal.addEventListener("click", function() {
     modal.style.display = "none";
+    qBox.style.display = 'block';
+    
 })
 
 nextButton.addEventListener("click", nextQ);

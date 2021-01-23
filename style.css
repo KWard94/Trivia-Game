@@ -1,7 +1,9 @@
 body {
   text-align: center;
   background-color: #007200;
+  /* height: 30rem; */
 }
+
 
 h1 {
   color: white;
@@ -9,6 +11,15 @@ h1 {
   font-family: "Bungee Outline", cursive;
   text-shadow: 8px 8px 8px red;
 }
+
+header, footer {
+    background-color: darkgray;
+    opacity: .8;
+    width: 100%;
+    height: 15rem;
+    position: relative;
+  }
+
 
 img {
   width: 50%;
@@ -43,7 +54,7 @@ img {
 
 input[type="button"].button:hover {
     cursor: pointer;
-    background: repeating-linear-gradient(45deg, red, green);
+    /* background: repeating-linear-gradient(45deg, red, green); */
     box-shadow: 5px 5px 5px black;
 
 }
@@ -91,6 +102,7 @@ input[type="button"].next-button:hover {
   margin-bottom: 100px;
   border: solid;
   border-color: red;
+  display: none;
 }
 
 .question-text {
@@ -126,7 +138,6 @@ input[type="button"].next-button:hover {
     border: solid red;
     padding: 50px;
     box-shadow: 0 0 0 5000px rgba(0, 0, 0, 0.7);
-    /* display: none; */
 }
 
 #close-modal {
@@ -142,19 +153,3 @@ input[type="button"].next-button:hover {
     cursor: pointer;
     color: red;
 }
-
-/* #modal-background {
-    background-color: darkgray;
-    opacity: .8;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-} */
-/* @media (max-width: 600px) {
-    .h1 {
-        color:red;
-    }
-    img {
-        display: none;
-    }
-} */
